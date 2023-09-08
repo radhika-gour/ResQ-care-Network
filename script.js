@@ -129,3 +129,20 @@ var swiper = new Swiper(".gallery-slider", {
 
 
 
+// script for eye-icon in signin and signup page
+
+
+    <script>
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#id_password");
+
+      togglePassword.addEventListener("click", function (e) {
+        // toggle the type attribute
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the eye slash icon
+        this.classList.toggle("fa-eye-slash");
+      });
+    </script>
+
